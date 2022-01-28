@@ -163,115 +163,114 @@ class _DashboardViewState extends State<DashboardView> {
               ],
             )
           : Center(
-            child: DataTable(
-                dataRowHeight: 28,
-                headingRowHeight: 28,
-                dividerThickness: 2,
-                
-                headingRowColor: MaterialStateProperty.resolveWith<Color>(
-                    (Set<MaterialState> states) {
-                  return Theme.of(context)
-                      .colorScheme
-                      .primary
-                      .withOpacity(0.05);
-                }),
-                columns: [
-                  DataColumn(
-                      label: Text(
-                    'Fechas'.toUpperCase(),
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 14),
-                  )),
-                  DataColumn(
-                      label: Text(
-                    'Nombre'.toUpperCase(),
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 14),
-                  )),
-                  DataColumn(
-                      label: Text(
-                    'Exportación'.toUpperCase(),
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 14),
-                  )),
-                  DataColumn(
-                      label: Text(
-                    'Envio'.toUpperCase(),
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 14),
-                  )),
-                ],
-                rows: [
-                  DataRow(cells: [
-                    const DataCell(Text('08/05/2021')),
-                    DataCell(Text('balance general'.toUpperCase())),
-                    DataCell(Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        InkWell(
-                          onTap: () {},
-                          child: Tooltip(
-                              message: "Excel",
-                              child: SvgPicture.asset(
-                                "assets/excel.svg",
-                                fit: BoxFit.contain,
-                              )),
-                        ),
-                        const SizedBox(width: 2.0),
-                        InkWell(
-                          onTap: () {},
-                          child: Tooltip(
-                              message: "Pdf",
-                              child: SvgPicture.asset(
-                                "assets/color-pdf.svg",
-                                height: 25,
-                                fit: BoxFit.contain,
-                              )),
-                        ),
-                        const SizedBox(width: 2.0),
-                        InkWell(
-                          onTap: () {},
-                          child: Tooltip(
-                              message: "Texto",
-                              child: SvgPicture.asset(
-                                "assets/txt.svg",
-                                height: 30,
-                                fit: BoxFit.contain,
-                              )),
-                        ),
-                      ],
+              child: DataTable(
+                  dataRowHeight: 28,
+                  headingRowHeight: 28,
+                  dividerThickness: 2,
+                  headingRowColor: MaterialStateProperty.resolveWith<Color>(
+                      (Set<MaterialState> states) {
+                    return Theme.of(context)
+                        .colorScheme
+                        .primary
+                        .withOpacity(0.05);
+                  }),
+                  columns: [
+                    DataColumn(
+                        label: Text(
+                      'Fechas'.toUpperCase(),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 16),
                     )),
-                    DataCell(
-                      Row(
+                    DataColumn(
+                        label: Text(
+                      'Nombre'.toUpperCase(),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 16),
+                    )),
+                    DataColumn(
+                        label: Text(
+                      'Exportación'.toUpperCase(),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 16),
+                    )),
+                    DataColumn(
+                        label: Text(
+                      'Envio'.toUpperCase(),
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 16),
+                    )),
+                  ],
+                  rows: [
+                    DataRow(cells: [
+                      const DataCell(Text('08/05/2021')),
+                      DataCell(Text('balance general'.toUpperCase())),
+                      DataCell(Row(
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           InkWell(
                             onTap: () {},
                             child: Tooltip(
-                                message: "WhatsApp",
+                                message: "Excel",
                                 child: SvgPicture.asset(
-                                  "assets/whatsapp.svg",
+                                  "assets/excel.svg",
                                   fit: BoxFit.contain,
-                                  width: 30,
-                                  height: 30,
                                 )),
                           ),
+                          const SizedBox(width: 2.0),
                           InkWell(
                             onTap: () {},
                             child: Tooltip(
-                                message: "Email",
+                                message: "Pdf",
                                 child: SvgPicture.asset(
-                                  "assets/e-mail.svg",
+                                  "assets/color-pdf.svg",
+                                  height: 25,
                                   fit: BoxFit.contain,
-                                  width: 30,
-                                  height: 40,
+                                )),
+                          ),
+                          const SizedBox(width: 2.0),
+                          InkWell(
+                            onTap: () {},
+                            child: Tooltip(
+                                message: "Texto",
+                                child: SvgPicture.asset(
+                                  "assets/txt.svg",
+                                  height: 30,
+                                  fit: BoxFit.contain,
                                 )),
                           ),
                         ],
+                      )),
+                      DataCell(
+                        Row(
+                          children: [
+                            InkWell(
+                              onTap: () {},
+                              child: Tooltip(
+                                  message: "WhatsApp",
+                                  child: SvgPicture.asset(
+                                    "assets/whatsapp.svg",
+                                    fit: BoxFit.contain,
+                                    width: 30,
+                                    height: 30,
+                                  )),
+                            ),
+                            InkWell(
+                              onTap: () {},
+                              child: Tooltip(
+                                  message: "Email",
+                                  child: SvgPicture.asset(
+                                    "assets/e-mail.svg",
+                                    fit: BoxFit.contain,
+                                    width: 30,
+                                    height: 40,
+                                  )),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
+                    ]),
                   ]),
-                ]),
-          ),
+            ),
     );
   }
 }
